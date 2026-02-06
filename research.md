@@ -4,7 +4,7 @@
 - Multimodal video captioning with dynamic temporal windowing
 - Integrated Qwen2.5, Qwen3, MiniLM, and multimodal chain-of-thought
 - Achieved SOTA results on YouCook2
-- Accepted to **NeurIPS 2025 (oral)** and **AAAI 2026**
+- Accepted to **NeurIPS 2025 7HVU Workshop (oral)** and **AAAI 2026 AI4EDU Workshop**
 
 ---
 
