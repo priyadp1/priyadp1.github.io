@@ -36,7 +36,7 @@ export const certifications = [
 ];
 
 export const experience: ExperienceItem[] = [
-  { role: "Machine Learning Research Intern", org: "Deep Forest Sciences", kind: "Internship", date: "Sept 2026 – Present" },
+  { role: "Machine Learning Research Intern", org: "Deep Forest Sciences", kind: "Research Internship", date: "Sept 2026 – Present" },
   { role: "AI Engineering Intern", org: "DrRx", kind: "Internship", date: "Aug 2026 – Present" },
   { role: "Machine Learning Researcher", org: "TRACE AI Lab · Rutgers University", kind: "Research", date: "May 2026 – Present" },
   { role: "AI Fellow", org: "AI4ALL Ignite Summer Accelerator", kind: "Fellowship", date: "May 2026 – Oct 2026" },
