@@ -61,7 +61,7 @@ export const experience: ExperienceItem[] = [
     focus: "Multi-Agent LLM Deliberation & Consensus Dynamics",
     org: "Algoverse AI Research",
     note: "ICML 2026 · Pluralistic Alignment Workshop",
-    kind: "Internship",
+    kind: "Research",
     date: "Sept 2025 – June 2026",
   },
   {
@@ -69,14 +69,14 @@ export const experience: ExperienceItem[] = [
     focus: "Multimodal Scene Captioning Systems",
     org: "Algoverse AI Research",
     note: "NeurIPS 2025 · 7HVU Workshop (Oral)  ·  AAAI 2026 · AI4EDU Workshop",
-    kind: "Internship",
+    kind: "Research",
     date: "June 2025 – Dec 2025",
   },
   {
     role: "Algorithms Research Shadow",
     focus: "RNA Folding & Dynamic Programming",
     org: "The College of New Jersey",
-    kind: "Part-time",
+    kind: "Research",
     date: "Jan 2025 – May 2025",
   },
 ];
@@ -95,7 +95,33 @@ export const coursework = [
 
 export const research: Entry[] = [
   {
-    title: "Lead Researcher",
+    title: "Machine Learning Research Intern",
+    org: "Deep Forest Sciences",
+    focus: "Chemical Language Models & Molecular Representation Learning",
+    date: "Sept 2026 – Present",
+    bullets: [
+      "Developing ChemBERTa-4, an OLMo-based chemical language model for molecular property prediction, retrosynthesis, and molecular generation.",
+      "Conducted comparative tokenizer analysis across OLMo, ChemFM, and ChemBERTa-3, identifying 9.55% and 87.97% vocabulary overlap with OLMo, respectively, to inform chemical tokenization and vocabulary adaptation strategies.",
+      "Benchmarked OLMo-7B across 9 molecular property datasets following continued pretraining on 10K–5M PubChem samples, evaluating toxicity, bioactivity, and physicochemical predictions using ROC-AUC and RMSE." ,
+      "Applied QLoRA fine-tuning to OLMo-7B, improving performance on 8 of 9 molecular benchmarks over non-fine-tuned baselines, achieving up to 22.1% relative ROC-AUC improvement and 16.4% RMSE reduction in the 100K PubChem configuration."
+
+    ],
+  },
+  {
+    title: "Machine Learning Researcher",
+    org: "TRACE AI Lab · Rutgers University",
+    focus: "Interpretable ML & Model Multiplicity",
+    date: "May 2026 – Present",
+    bullets: ["Conducting independent research under Linda Ness and Lesia Semenova on fairness, interpretability, and threshold stability across sparse decision-tree Rashomon sets." ,
+              "Benchmarked 4 configurations (Standard/Anytime ArborEnum, PRAXIS + TGB, PRAXIS + Unbiased Fairness Binning) across 3 fairness datasets, finding that fairness-aware binning generally reduced disparities at the cost of predictive accuracy.",
+              "Evaluated 3 fairness metrics (statistical parity, equal opportunity, equalized odds) across up to 1,000 near-optimal trees per configuration, demonstrating substantial fairness variation among similarly accurate models.",
+              "Developed leaf-level fairness attribution methods, finding that a small subset of influential leaves drives disproportionate fairness disparities, while tree complexity alone does not explain fairness or stability differences." ,
+              "Conducted 1,000-resample bootstrap analyses with 95% confidence intervals and compared up to 50 most-fair vs. 50 least-fair trees, finding that improved group fairness does not consistently imply greater prediction stability." ,
+              "Investigating threshold stability through continuous-feature enumeration, interval-based analysis, and ArborEnum to characterize how alternative threshold configurations affect structural diversity and near-optimal performance."
+      ]
+  },
+  {
+    title: "Lead Machine Learning Researcher",
     org: "Center for Discrete Mathematics and Theoretical Computer Science (DIMACS)",
     focus: "Interpretable ML & Model Multiplicity",
     date: "Jan 2026 – May 2026",
@@ -168,72 +194,82 @@ export const publications: Entry[] = [
     ],
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2510.23907" }],
   },
+  {
+    title: "Directional Influence and Consensus Dynamics in Multi-Agent LLM Systems",
+    tags: ["ICML 2026 — Pluralistic Alignment Workshop"],
+    bullets: [
+      "Developed a multi-agent LLM framework to study consensus formation, showing that convergence is driven by directional model deference rather than purely independent reasoning.",
+      "Designed and executed large-scale 20-round deliberation experiments across subjective and objective benchmarks (GlobalOpinionsQA, Anthropic Written-Evals, Humanity’s Last Exam) using GPT-4.1, Mistral, and cross-family model systems (Phi, LLaMA, and Mistral).",
+      "Introduced a rotation-based experimental framework that disentangles model identity from response content, revealing that identity alone does not explain inter-agent influence.",
+    ],
+    links: [{ label: "Open Review", href: "https://openreview.net/forum?id=qKQlfKER2P" }],
+  }
 ];
 
 /* ───────────────────────── Industry ───────────────────────── */
 
 export const industry: Entry[] = [
   {
-    title: "Machine Learning Research Intern",
-    org: "Deep Forest Sciences",
-    date: "Sept 2026 – Present",
-    summary:
-      "Developing ChemBERTa-4, an OLMo-based chemical language model for molecular representation learning and property prediction.",
-  },
-  {
     title: "AI Engineering Intern",
-    org: "DrRx",
+    org: "DrRx.ai",
+    focus: "Retrieval-Augmented Generation",
     date: "Aug 2026 – Present",
-    summary:
+    bullets: [
       "Developing a RAG pipeline leveraging BM25S retrieval and Qwen2.5-7B-Instruct over 2K+ pharmaceutical documents, integrating data from PostgreSQL and AWS S3.",
+    ],
   },
   {
     title: "AI Fellow",
     org: "AI4ALL Ignite Summer Accelerator",
+    focus: "Computer Vision & Assistive Technology",
     date: "May 2026 – Oct 2026",
     bullets: [
-      "Selected for the competitive AI4ALL Ignite Summer 2026 Accelerator.",
-      "Developed an end-to-end Braille-to-speech computer vision pipeline integrating YOLO11n, EfficientNet-B0, Liblouis, and Piper TTS, achieving 96.15% detection mAP50, 99.41% classification accuracy, and 97.32% character coverage.",
-      "Trained and evaluated detection and classification models across 4 datasets and 5 model families, scaling to 10,117 augmented images and 193K+ character crops and performing end-to-end error analysis to identify false positive detection and reading-order failures.",
+      <>
+        Developed an end-to-end Braille-to-speech computer vision pipeline integrating YOLO11n, EfficientNet-B0, Liblouis, and Piper TTS, achieving{" "}
+        <Em>96.15% detection mAP50</Em>, <Em>99.41% classification accuracy</Em>, and <Em>97.32% character coverage</Em>.
+      </>,
+      "Trained and evaluated detection and classification models across 4 datasets and 5 model families, scaling to 10,117 augmented images and 193K+ character crops, and performed end-to-end error analysis to identify false-positive detection and reading-order failures.",
     ],
   },
   {
     title: "Machine Learning Intern",
     org: "Regeneron",
+    focus: "QA Validations & Operations",
     date: "May 2026 – Aug 2026",
-    summary:
-      "Deployed a Streamlit application for the QA Validation and Operations Team after evaluating 10+ machine learning modeling approaches and selecting TabPFN Regressor and Classifier models, engineering 40 trend-based features from 500K+ GMP manufacturing records to predict equipment breakdowns, achieving a 67.8% ROC-AUC.",
+    bullets: [
+      "Deployed a Streamlit app for the QA Validation and Operations team after evaluating 10+ ML approaches and selecting a TabPFN Regressor.",
+      "Engineered 40 trend-based features from 500K+ GMP manufacturing records to predict remaining useful life (RUL) and classify equipment-breakdown risk using an RUL threshold.",
+      <>
+        Implemented K-fold cross-validation with single-class fold rejection and data-leakage safeguards, achieving <Em>67.8% ROC-AUC</Em>.
+      </>,
+    ],
   },
   {
     title: "Google Summer of Code 2026 Contributor",
-    org: "DeepChem",
+    org: "DeepChem · Google Summer of Code",
+    focus: "Molecular Language Models",
     date: "May 2026 – Aug 2026",
     bullets: [
       "Selected as 1 of 5 from 200+ applicants to extend DeepChem’s support for large-scale molecular language models.",
-      "Extended the HuggingFaceModel class by implementing the generate() API, implementing batched autoregressive inference, tokenizer padding, and device-aware execution.",
+      "Extended the HuggingFaceModel class by implementing the generate() API, enabling batched autoregressive inference, tokenizer padding, and device-aware execution.",
       "Developed an OLMo wrapper class supporting regression, classification, multitask learning, and causal language modeling with custom prediction heads, pretrained checkpoint loading, mixed-precision inference, LoRA/QLoRA, and multi-GPU support.",
+      <>
+        Benchmarked QLoRA-adapted OLMo across 9 molecular datasets, achieving <Em>93.1% ROC-AUC</Em> on BBBP and <Em>92.2%</Em> on BACE with random
+        splits, and <Em>91.6%</Em> on ClinTox with scaffold splits.
+      </>,
     ],
   },
   {
     title: "AI Associate Developer",
-    org: "Insurity",
+    org: "Insurity · SpatialKey Team",
+    focus: "Geospatial AI & ML",
     date: "Oct 2025 – Jan 2026",
-    projects: [
-      {
-        title: "Peril Prediction Project",
-        bullets: [
-          "Engineered large-scale geospatial preprocessing pipelines (6M+ rows) integrating climate variables with peril events via time alignment, spatial filtering, and feature engineering using Python, Pandas, and GeoPandas.",
-          "Built and evaluated LightGBM-based multi-class peril classifiers, applying SMOTE class balancing achieving a 70% accuracy and F1 score.",
-          "Experimented with a Temporal Fusion Transformer (TFT), modeling seasonal dependencies via cyclical week encoding and training GPU-accelerated PyTorch models on NVIDIA RTX hardware.",
-        ],
-      },
-      {
-        title: "Computer Vision — Geospatial Change Detection",
-        bullets: [
-          "Developed a geospatial change-detection system for before/after satellite imagery using OpenCV and deep learning pipelines.",
-          "Implemented CNN and Transformer-based architectures including U-Net++ for high-resolution semantic segmentation.",
-        ],
-      },
+    bullets: [
+      "Built geospatial preprocessing pipelines over 6M+ records, integrating climate and peril data via Pandas and GeoPandas.",
+      <>
+        Trained LightGBM peril classifiers with SMOTE balancing, achieving <Em>+10% accuracy and F1 score</Em>.
+      </>,
+      "Built a U-Net++ change-detection system for before/after wildfire satellite imagery, adding shadow normalization and shadow masking to reduce false positives from terrain illumination.",
     ],
   },
 ];
@@ -242,27 +278,42 @@ export const industry: Entry[] = [
 
 export const projects: Entry[] = [
   {
-    title: "Knowledge Distillation for Reasoning in MoE and Dense LLMs",
-    focus: "Efficiently transferring reasoning from large LLMs to smaller models using parameter-efficient distillation",
+    title: "Kalinga",
+    focus: "Multilingual Hospital Request Routing",
+    tags: ["Rutgers HealthHack 2026 — Honorable Mention", "Python", "PyTorch", "Hugging Face", "SetFit", "scikit-learn"],
     bullets: [
-      "Developed an offline knowledge distillation framework combining sequence-level and logit-level distillation to transfer reasoning capabilities from large teacher models to smaller student models.",
-      "Leveraged teacher-generated chain-of-thought (CoT) reasoning traces and trained student models via supervised fine-tuning to replicate both intermediate reasoning steps and final answers.",
-      "Applied Low-Rank Adaptation (LoRA) to enable parameter-efficient distillation, updating less than 1% of model weights while preserving performance and reducing compute requirements.",
-      "Implemented logit-based distillation using temperature-scaled softmax and KL divergence loss to align student token distributions with teacher outputs via top-k probability reconstruction.",
-      "Built an offline pipeline to extract teacher logits and map them to student token spaces, enabling scalable training without direct API dependency.",
-      "Evaluated performance on SciBench and TheoremQA across multi-domain reasoning tasks, using accuracy and BERTScore to measure both correctness and reasoning alignment.",
-      "Demonstrated that small LLMs can approximate both the reasoning process and output distributions of larger models with minimal parameter updates.",
+      "Developed a multilingual, multi-label NLP classifier for hospital request routing across 4 languages and 6 departments; curated a labeled dataset and benchmarked TF-IDF/logistic regression and BGE embeddings.",
+      <>
+        Fine-tuned multilingual MiniLM using SetFit and contrastive learning; achieved <Em>0.8963 macro F1 / 83.73% accuracy</Em> on grouped test
+        data and <Em>0.8339 macro F1 / 79.03% accuracy</Em> on an independent holdout set, using StratifiedGroupKFold for group-aware splitting.
+      </>,
+      "Implemented emergency escalation and out-of-scope abstention rules for safety-aware routing; published the fine-tuned classifier on Hugging Face.",
+    ],
+  },
+  {
+    title: "Knowledge Distillation for Reasoning in MoE and Dense LLMs",
+    focus: "Transferring chain-of-thought reasoning from large LLMs to smaller models",
+    tags: ["Python", "PyTorch", "Hugging Face", "LoRA"],
+    bullets: [
+      "Developed sequence-based and logit-based knowledge distillation pipelines to transfer chain-of-thought reasoning from GPT-OSS 120B and LLaMA 70B teacher models to a 3B student using LoRA-based fine-tuning.",
+      "Implemented temperature-scaled KL divergence, top-k logit extraction, and cross-tokenizer alignment to match teacher-student output distributions despite vocabulary mismatches.",
+      <>
+        Achieved up to <Em>4.5% accuracy improvement</Em> and <Em>96%+ BERTScore</Em> on SciBench and TheoremQA; demonstrated that logit
+        distillation consistently outperformed sequence-based distillation.
+      </>,
     ],
   },
   {
     title: "GenreBlender",
     focus: "Generative AI Music Mixer & Classifier",
+    tags: ["Python", "PyTorch", "MusicGen", "Streamlit", "scikit-learn"],
     bullets: [
-      "Built a generative AI system that blends two music genres using a controllable slider (α ∈ [0,1]) and generates hybrid audio with Meta’s MusicGen.",
-      "Designed a clean ML pipeline on the GTZAN dataset, including feature selection, scaling, label encoding, and reproducible preprocessing for inference.",
-      "Trained a 4-layer PyTorch MLP (92% validation accuracy) using scikit-learn’s GroupShuffleSplit to prevent data leakage and predict genre probabilities from audio features.",
-      "Developed a measurable genre-blending framework by comparing predicted probabilities against a weighted target distribution to quantify how well the blend worked via Target = (α·A) + (1−α)·B.",
-      "Built and deployed an interactive Streamlit web application enabling real-time genre blending, probabilistic evaluation, and 10-second AI-generated audio output.",
+      "Architected an end-to-end generative AI system using Meta’s MusicGen to synthesize 10-second hybrid audio clips with controllable genre blending via a continuous weighting parameter (α ∈ [0,1]).",
+      <>
+        Engineered a GTZAN preprocessing pipeline with feature selection, normalization, and GroupShuffleSplit validation; trained a custom
+        4-layer PyTorch MLP achieving <Em>92% validation accuracy</Em>.
+      </>,
+      "Developed a probability-based evaluation framework comparing predicted genre distributions against weighted target mixtures; deployed an interactive Streamlit application for audio generation and quantitative evaluation.",
     ],
   },
   {
