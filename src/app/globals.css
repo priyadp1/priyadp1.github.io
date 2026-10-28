@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-black text-gray-200 antialiased;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+a {
+  @apply transition-colors duration-200;
+}
