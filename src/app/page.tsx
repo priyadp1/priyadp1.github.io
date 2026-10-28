@@ -1,265 +1,137 @@
+import Image from "next/image";
+import { siteConfig } from "@/config/site";
+import { certifications, coursework, experience } from "@/data/content";
+import { SectionTitle, Tag } from "@/app/components/ui";
+
+const button =
+  "inline-flex items-center rounded-full border px-4 py-2 text-sm transition-colors";
+
 export default function Home() {
   return (
-    <div className="space-y-28">
-
-      {/* Hero Section */}
+    <div className="space-y-24">
+      {/* Hero */}
       <section className="space-y-8">
-        <h1 className="text-6xl font-bold text-white tracking-tight">
-          Prisha Priyadarshini
-        </h1>
+        <div className="flex flex-col-reverse gap-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-4">
+            <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl">Prisha Priyadarshini</h1>
+            <p className="text-lg text-zinc-400">
+              AI/ML Researcher & Engineer
+              <span className="mx-2 text-zinc-700">/</span>
+              Computer Science & Mathematics
+              <span className="mx-2 text-zinc-700">/</span>
+              Rutgers University–New Brunswick
+            </p>
+          </div>
+          <Image
+            src="/profile.jpg"
+            alt="Prisha Priyadarshini"
+            width={320}
+            height={320}
+            priority
+            className="h-32 w-32 shrink-0 rounded-full object-cover ring-1 ring-zinc-800 sm:h-40 sm:w-40"
+          />
+        </div>
 
-        <p className="text-xl text-gray-400">
-          AI/ML Researcher & Engineer · Computer Science & Mathematics · Rutgers University -- New Brunswick
-        </p>
-
-        <div className="max-w-3xl text-gray-300 leading-relaxed space-y-4 text-lg">
+        <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-zinc-300">
           <p>
-            I study <span className="text-white font-medium">multi-agent consensus formation</span>, 
-            <span className="text-white font-medium"> multimodal machine learning</span>, and 
-            <span className="text-white font-medium"> interpretable ML</span>. 
-            My work investigates how large-scale models behave and why.
+            I study <span className="text-white">multi-agent consensus formation</span>,{" "}
+            <span className="text-white">multimodal machine learning</span>, and{" "}
+            <span className="text-white">interpretable ML</span>. My work investigates how
+            large-scale models behave and why.
           </p>
-
-          <p>
-            My research spans LLM deliberation systems, multimodal captioning architectures,
-            and decision tree interpretability, combining empirical experimentation 
-            with principled algorithmic analysis.
-          </p>
-
-          <p className="text-gray-400">
-            AWS Certified Machine Learning – Specialty · AWS Certified Cloud Practitioner
+          <p className="text-zinc-400">
+            My research spans LLM deliberation systems, multimodal captioning architectures, and
+            decision tree interpretability, combining empirical experimentation with principled
+            algorithmic analysis.
           </p>
         </div>
-      </section>
 
-      {/* Experiences */}
-      <section className="space-y-10">
-        <h2 className="text-3xl font-semibold text-white tracking-tight">
-          Research & Industry Experience
-        </h2>
-
-        <div className="space-y-8">
-          
-          {/* DFS */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Machine Learning Research Intern 
-              </h3>
-              <p className="text-sm text-gray-400">
-                Deep Forest Sciences · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Sept 2026 - Present
-            </span>
-          </div>
-        
-
-          {/* DrRx */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                AI Engineering Intern 
-              </h3>
-              <p className="text-sm text-gray-400">
-                DrRx · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Aug 2026 - Present
-            </span>
-          </div>
-
-            {/* TRACE */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Machine Learning Researcher
-              </h3>
-              <p className="text-sm text-gray-400">
-                TRACE AI Lab · Rutgers University · Research
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              May 2026 - Present
-            </span>
-          </div>
-
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                AI Fellow
-              </h3>
-              <p className="text-sm text-gray-400">
-                AI4ALL Ignite Summer Accelerator
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              May 2026 - Oct 2026
-            </span>
-          </div>
-        
-
-          {/* DIMACS */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Lead Machine Learning Researcher --- Interpretable ML & Model Multiplicity
-              </h3>
-              <p className="text-sm text-gray-400">
-                The Center for Discrete Mathematics and Theoretical Computer Science (DIMACS) · Research · Rutgers University
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Jan 2026 – May 2026
-            </span>
-          </div>
-
-          {/* Regeneron */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Machine Learning Intern  
-              </h3>
-              <p className="text-sm text-gray-400">
-                Regeneron · QA Validations & Operations · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              May 2026 – Aug 2026
-            </span>
-          </div>
-
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Google Summer of Code 2026 Contributor (DeepChem)  
-              </h3>
-              <p className="text-sm text-gray-400">
-                Google Summer of Code 
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              May 2026 - Aug 2026
-            </span>
-          </div>
-
-
-          {/* Geospatial AI */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                AI Associate Developer --- Geospatial AI & ML
-              </h3>
-              <p className="text-sm text-gray-400">
-                Insurity · Internship · Research & Development · SpatialKey Team · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Oct 2025 – Jan 2026
-            </span>
-          </div>
-
-          {/* Multi-Agent */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Artificial Intelligence Researcher --- Multi-Agent LLM Deliberation & Consensus Dynamics
-              </h3>
-              <p className="text-sm text-gray-400">
-                Algoverse AI Research · ICML 2026 (Pluralistic Alignment Workshop) · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Sept 2025 – June 2026
-            </span>
-          </div>
-
-          {/* Multimodal */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Artificial Intelligence Researcher --- Multimodal Scene Captioning Systems
-              </h3>
-              <p className="text-sm text-gray-400">
-                Algoverse AI Research · NeurIPS 2025 (7HVU Workshop (Oral)) · AAAI 2026 (AI4EDU Workshop) · Internship
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              June 2025 – Dec 2025
-            </span>
-          </div>
-
-          {/* Algorithms */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-xl font-medium text-white">
-                Algorithms Research Shadow --- RNA Folding & Dynamic Programming
-              </h3>
-              <p className="text-sm text-gray-400">
-                The College of New Jersey · Part-time
-              </p>
-            </div>
-            <span className="text-sm text-gray-400 whitespace-nowrap">
-              Jan 2025 – May 2025
-            </span>
-          </div>
-
+        <div className="flex flex-wrap gap-2">
+          {certifications.map((c) => (
+            <Tag key={c}>{c}</Tag>
+          ))}
         </div>
-      </section>
 
-      {/* Coursework Section */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-semibold text-white tracking-tight">
-          Selected Coursework
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8 text-gray-300">
-
-          <div>
-            <h3 className="text-white font-medium mb-2">
-              Algorithms & Theory
-            </h3>
-            <p>Data Structures · Discrete Structures I–II · Design & Analysis of Algorithms </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-medium mb-2">
-              Artificial Intelligence
-            </h3>
-            <p>Artificial Intelligence · Deep Learning · Natural Language Processing · Data Science </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-medium mb-2">
-              Mathematics
-            </h3>
-            <p>Calculus I–III · Linear Algebra · Differential Equations · Probability & Statistics · Numerical Computing & Analysis </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-medium mb-2">
-              Systems
-            </h3>
-            <p>Computer Architecture · Operating Systems · Cryptography & Cybersecurity · Database Systems </p>
-          </div>
-
-        </div>
-      </section>
-
-      <section className="space-y-8">
-        <h2 className="text-3xl font-semibold text-white tracking-tight">
-          Contact Me
-        </h2>
-        <p className="text-gray-300">
-          I'm always open to discussing research ideas, industry opportunities, or potential collaborations. 
-          Feel free to reach out via email at <a href="mailto:prishapriya31@gmail.com" className="text-blue-400 hover:underline">
-            prishapriya31@gmail.com
+        <div className="flex flex-wrap gap-3 pt-2">
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className={`${button} border-sky-300 bg-sky-300 font-medium text-zinc-950 hover:bg-sky-200`}
+          >
+            Email me
           </a>
-        </p>
+          {[
+            { label: "CV", href: siteConfig.links.cv },
+            { label: "GitHub", href: siteConfig.links.github },
+            { label: "LinkedIn", href: siteConfig.links.linkedin },
+          ].map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${button} border-zinc-700 text-zinc-200 hover:border-zinc-500 hover:text-white`}
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
       </section>
 
+      {/* Experience */}
+      <section>
+        <SectionTitle>Research & Industry Experience</SectionTitle>
+        <ol className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
+          {experience.map((e, i) => (
+            <li key={i} className="grid gap-x-10 gap-y-1 py-6 md:grid-cols-[10.5rem_1fr]">
+              <p className="pt-0.5 whitespace-nowrap text-sm text-zinc-500 tabular-nums">{e.date}</p>
+              <div className="space-y-1">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <h3 className="font-semibold text-white">{e.role}</h3>
+                  <span className="rounded-full bg-zinc-900 px-2 py-0.5 text-[11px] uppercase tracking-wider text-zinc-500">
+                    {e.kind}
+                  </span>
+                </div>
+                <p className="text-sm text-sky-300/90">{e.org}</p>
+                {e.focus && <p className="text-sm italic text-zinc-500">{e.focus}</p>}
+                {e.note && <p className="text-sm text-zinc-400">{e.note}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Coursework */}
+      <section>
+        <SectionTitle>Selected Coursework</SectionTitle>
+        <div className="grid gap-4 md:grid-cols-2">
+          {coursework.map((c) => (
+            <div key={c.area} className="rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-6">
+              <h3 className="mb-3 font-medium text-white">{c.area}</h3>
+              <ul className="space-y-1.5 text-sm text-zinc-400">
+                {c.courses.map((course) => (
+                  <li key={course}>{course}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-8 md:p-10">
+        <h2 className="mb-3 font-serif text-2xl text-white">Contact Me</h2>
+        <p className="max-w-2xl leading-relaxed text-zinc-400">
+          I&apos;m always open to discussing research ideas, industry opportunities, or potential
+          collaborations. Feel free to reach out via email at{" "}
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="text-sky-300 underline decoration-sky-300/30 underline-offset-4 hover:decoration-sky-300"
+          >
+            {siteConfig.email}
+          </a>
+          .
+        </p>
+      </section>
     </div>
   );
 }
