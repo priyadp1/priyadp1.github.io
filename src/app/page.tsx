@@ -34,15 +34,33 @@ export default function Home() {
 
         <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-zinc-300">
           <p>
-            I study <span className="text-white">multi-agent consensus formation</span>,{" "}
-            <span className="text-white">multimodal machine learning</span>, and{" "}
-            <span className="text-white">interpretable ML</span>. My work investigates how
-            large-scale models behave and why.
-          </p>
           <p className="text-zinc-400">
-            My research spans LLM deliberation systems, multimodal captioning architectures, and
-            decision tree interpretability, combining empirical experimentation with principled
-            algorithmic analysis.
+  I investigate{" "}
+  <span className="text-white">
+    why AI systems behave the way they do
+  </span>
+  , focusing on{" "}
+  <span className="text-white">
+    multi-agent consensus formation
+  </span>
+  ,{" "}
+  <span className="text-white">Rashomon sets</span>, and{" "}
+  <span className="text-white">
+    interpretable machine learning
+  </span>
+  . My research examines how interactions between models
+  shape collective decisions and why equally accurate
+  models can arrive at different decisions.
+</p>
+
+<p className="text-zinc-400">
+  My work spans LLM deliberation dynamics, model
+  multiplicity, decision tree interpretability, and
+  multimodal learning. Through empirical experimentation
+  and algorithmic analysis, I aim to uncover the
+  mechanisms underlying AI behavior and advance more
+  reliable and interpretable AI systems.
+</p>
           </p>
         </div>
 
