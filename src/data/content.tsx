@@ -106,6 +106,7 @@ export const research: Entry[] = [
       "Applied QLoRA fine-tuning to OLMo-7B, improving performance on 8 of 9 molecular benchmarks over non-fine-tuned baselines, achieving up to 22.1% relative ROC-AUC improvement and 16.4% RMSE reduction in the 100K PubChem configuration."
 
     ],
+    links: [{ label: "Deep Forest Sciences", href: "https://deepforestsci.com/" }],
   },
   {
     title: "Machine Learning Researcher",
@@ -118,7 +119,8 @@ export const research: Entry[] = [
               "Developed leaf-level fairness attribution methods, finding that a small subset of influential leaves drives disproportionate fairness disparities, while tree complexity alone does not explain fairness or stability differences." ,
               "Conducted 1,000-resample bootstrap analyses with 95% confidence intervals and compared up to 50 most-fair vs. 50 least-fair trees, finding that improved group fairness does not consistently imply greater prediction stability." ,
               "Investigating threshold stability through continuous-feature enumeration, interval-based analysis, and ArborEnum to characterize how alternative threshold configurations affect structural diversity and near-optimal performance."
-      ]
+      ],
+    links: [{ label: "TRACE AI Lab Research", href: "https://lesiasemenova.github.io/research/" }],
   },
   {
     title: "Lead Machine Learning Researcher",
@@ -257,6 +259,10 @@ export const industry: Entry[] = [
         Benchmarked QLoRA-adapted OLMo across 9 molecular datasets, achieving <Em>93.1% ROC-AUC</Em> on BBBP and <Em>92.2%</Em> on BACE with random
         splits, and <Em>91.6%</Em> on ClinTox with scaffold splits.
       </>,
+    ],
+    links: [
+      { label: "DeepChem", href: "https://github.com/deepchem/deepchem" },
+      { label: "GSoC Work Product", href: "https://github.com/deepchem/deepchem/discussions/5114" },
     ],
   },
   {

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { siteConfig } from "@/config/site";
 
 const pages = [
   { href: "/research", label: "Research" },
@@ -12,12 +11,6 @@ const pages = [
   { href: "/projects", label: "Projects" },
   { href: "/skills", label: "Skills" },
   { href: "/extracurriculars", label: "Extracurriculars" },
-];
-
-const external = [
-  { href: siteConfig.links.cv, label: "CV" },
-  { href: siteConfig.links.github, label: "GitHub" },
-  { href: siteConfig.links.linkedin, label: "LinkedIn" },
 ];
 
 export default function Navbar() {
@@ -44,18 +37,6 @@ export default function Navbar() {
             <Link key={p.href} href={p.href} className={pageClass(p.href)}>
               {p.label}
             </Link>
-          ))}
-          <span className="h-4 w-px bg-zinc-800" />
-          {external.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-sky-300"
-            >
-              {l.label}
-            </a>
           ))}
         </div>
 
@@ -90,19 +71,6 @@ export default function Navbar() {
               >
                 {p.label}
               </Link>
-            ))}
-          </div>
-          <div className="mt-3 flex gap-6 border-t border-zinc-800/80 pt-4 text-sm">
-            {external.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-sky-300"
-              >
-                {l.label}
-              </a>
             ))}
           </div>
         </div>
