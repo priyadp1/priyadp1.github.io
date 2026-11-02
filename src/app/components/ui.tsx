@@ -48,6 +48,16 @@ export function EntryBlock({ entry }: { entry: Entry }) {
           <h2 className="text-xl font-semibold text-white">{entry.title}</h2>
           {entry.org && <p className="text-sky-300/90">{entry.org}</p>}
           {entry.focus && <p className="text-sm italic text-zinc-500">{entry.focus}</p>}
+          {entry.authors && (
+            <p className="text-sm text-zinc-400">
+              {entry.authors.map((a, i) => (
+                <span key={a}>
+                  {i > 0 && ", "}
+                  <span className={a === "Prisha Priyadarshini" ? "font-medium text-white" : undefined}>{a}</span>
+                </span>
+              ))}
+            </p>
+          )}
         </header>
 
         {entry.tags && (

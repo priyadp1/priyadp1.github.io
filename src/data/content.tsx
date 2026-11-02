@@ -8,6 +8,7 @@ export type Entry = {
   org?: string;
   date?: string;
   focus?: string;
+  authors?: string[];
   tags?: string[];
   summary?: ReactNode;
   bullets?: ReactNode[];
