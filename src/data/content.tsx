@@ -24,6 +24,13 @@ export type ExperienceItem = {
   note?: string;
 };
 
+export type PublicationsItem = {
+  title: string;
+  tags?: string[];
+  authors?: string[];
+  links?: { label: string; href: string }[];
+};
+
 const Em = ({ children }: { children: ReactNode }) => (
   <span className="font-medium text-white">{children}</span>
 );
@@ -183,28 +190,18 @@ export const research: Entry[] = [
 
 /* ───────────────────────── Publications ───────────────────────── */
 
-export const publications: Entry[] = [
+export const publications: PublicationsItem[] = [
+   {
+    title: "Directional Influence and Consensus Dynamics in Multi-Agent LLM Systems",
+    tags: ["ICML 2026 — Pluralistic Alignment Workshop"],
+    authors: ["Prisha Priyadarshini" , "Aryan Shrivastava"],
+    links: [{ label: "Open Review", href: "https://openreview.net/forum?id=qKQlfKER2P" }],
+  } ,
   {
     title: "DynaStride: Dynamic Stride Windowing with MMCoT for Instructional Multi-Scene Captioning",
     tags: ["NeurIPS 2025 — Oral Presentation (7HVU Workshop)", "AAAI 2026 — AI4EDU Workshop"],
-    bullets: [
-      "Developed a hierarchical scene-captioning pipeline integrating dynamic stride window selection with multimodal chain-of-thought reasoning.",
-      "Leveraged Qwen2.5, Qwen3, and MiniLM embeddings for temporally coherent subcaption aggregation.",
-      <>
-        Achieved <Em>+17% CIDEr</Em> over GPT-4o and <Em>+14% over VLLaMA-3</Em> on the YouCook2 dataset.
-      </>,
-    ],
+    authors: ["Eddison Pham" , "Prisha Priyadarshini" , "Adrian Maliackel" , "Kanishk Bandi" , "Cristian Meo" , "Kevin Zhu"] ,
     links: [{ label: "arXiv", href: "https://arxiv.org/pdf/2510.23907" }],
-  },
-  {
-    title: "Directional Influence and Consensus Dynamics in Multi-Agent LLM Systems",
-    tags: ["ICML 2026 — Pluralistic Alignment Workshop"],
-    bullets: [
-      "Developed a multi-agent LLM framework to study consensus formation, showing that convergence is driven by directional model deference rather than purely independent reasoning.",
-      "Designed and executed large-scale 20-round deliberation experiments across subjective and objective benchmarks (GlobalOpinionsQA, Anthropic Written-Evals, Humanity’s Last Exam) using GPT-4.1, Mistral, and cross-family model systems (Phi, LLaMA, and Mistral).",
-      "Introduced a rotation-based experimental framework that disentangles model identity from response content, revealing that identity alone does not explain inter-agent influence.",
-    ],
-    links: [{ label: "Open Review", href: "https://openreview.net/forum?id=qKQlfKER2P" }],
   }
 ];
 
