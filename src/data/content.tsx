@@ -44,6 +44,7 @@ export const certifications = [
 ];
 
 export const experience: ExperienceItem[] = [
+  {role: "Agentic AI Fellow" , org: "Break Through Tech" , kind: "Fellowship" , date: "Nov 2026 – Present" },
   { role: "Machine Learning Research Intern", org: "Deep Forest Sciences", kind: "Research Internship", date: "Sept 2026 – Present" },
   { role: "AI Engineering Intern", org: "DrRx", kind: "Internship", date: "Aug 2026 – Present" },
   { role: "Machine Learning Researcher", org: "TRACE AI Lab · Rutgers University", kind: "Research", date: "May 2026 – Present" },
